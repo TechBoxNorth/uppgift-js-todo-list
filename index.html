@@ -7,6 +7,29 @@
     <title>Todo List in Vanilla JavaScript</title>
 </head>
 <body>
+    <header>
+        <h1 class="title">TODO LIST</h1>
+        <h3 class="tagline">Don't put off till tomorrow what you can accomplish today!</h3>
+    </header>
+    <main>
+        <div class="create-task">
+            <input type="text" name="task" id="task" placeholder="New Todo">
+            <button>CREATE</button>
+        </div>
+        <ul class="task-list">
+            <li class="task">
+                <p>Clean the kitchen</p>
+                <img src="img/arrow_up.svg" class="move-up" alt="up arrow">
+                <img src="img/arrow_down.svg" class="move-down" alt="down arrow">
+                <img src="img/delete.svg" class="delete-task" alt="trash bin">
+                <img src="img/check.svg" class="check-task" alt="check mark">
+            </li>
+        </ul>
+
+    </main>
+    <footer>
+
+    </footer>
     <script type="module" src="index.js"></script>
 </body>
 </html>
