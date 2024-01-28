@@ -14,19 +14,11 @@
     </header>
     <main>
         <div class="create-task">
-            <input type="text" name="task" class="task-text" placeholder="New Todo">
-            <button class="create-btn">CREATE</button>
+            <input type="text" name="task" class="task-textbox" placeholder="New Todo">
+            <button onclick="addTask()" class="create-btn">CREATE</button>
         </div>
         <ul class="task-list">
-            <li class="task">
-                <p>Clean the kitchen</p>
-                <div class="icons">
-                    <img src="img/arrow_up.svg" class="move-up" alt="up arrow">
-                    <img src="img/arrow_down.svg" class="move-down" alt="down arrow">
-                    <img src="img/delete.svg" class="delete-task" alt="trash bin">
-                    <img src="img/check.svg" class="check-task" alt="check mark">
-                </div>
-            </li>
+            
         </ul>
 
     </main>
@@ -34,6 +26,7 @@
 
     </footer>
     </div>
-    <script type="module" src="index.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
+

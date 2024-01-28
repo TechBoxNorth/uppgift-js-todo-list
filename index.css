@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -41,7 +42,7 @@ header h3 {
     width: 86%;
 }
 
-.task-text {
+.task-textbox {
     border: none;
     width: 100%;
     background-color: white;
@@ -58,6 +59,8 @@ button {
     border-radius: 5px;
     margin-right: 0;
     margin-left: auto;
+    background-color: rgb(35, 46, 56);
+    color: whitesmoke;
 }
 
 .task-list {
@@ -77,6 +80,14 @@ button {
     background-color: white;
     border-radius: 5px;
     padding-left: 15px;
+}
+
+.check-task {
+    content: url(img/check.svg);
+}
+
+.check-task.checked {
+    content: url(img/check_green.svg);
 }
 
 .task p {
