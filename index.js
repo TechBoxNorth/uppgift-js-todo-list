@@ -14,32 +14,26 @@ function addTask(){
 }
 
 taskList.addEventListener('click', (e) => {
+    const task = e.target.parentElement.parentElement;
     if(e.target.classList.contains('check-task')){
         console.log('check!');
         e.target.classList.toggle('checked')
     } else if (e.target.classList.contains('delete-task')){
         console.log('delete');
-        const task = e.target.parentElement.parentElement;
         console.log(task);
         task.remove();
+    } else if (e.target.classList.contains('move-up')){
+        const previousTask = task.previousSibling;
+        if (previousTask.tagName === 'LI'){
+            console.log(previousTask.tagName);
+            taskList.insertBefore(task,previousTask);
+        }
+    } else if (e.target.classList.contains('move-down')){
+        const nextTask = task.nextSibling;
+        if (nextTask !== null && nextTask.tagName === 'LI'){
+            console.log(nextTask.tagName);
+            taskList.insertBefore(nextTask,task);
+        }
     }
-});
 
-
-/*
-const taskList = document.querySelector('.task-list');
-const createBtn = document.querySelector('.create-btn');
-createBtn.addEventListener('click', () => {
-    const taskTxt = document.querySelector('.task-text');
-    taskList.insertAdjacentHTML("afterbegin", `<li class="task">
-    <p>${taskTxt.value}</p>
-    <div class="icons">
-        <img src="img/arrow_up.svg" class="move-up" alt="up arrow">
-        <img src="img/arrow_down.svg" class="move-down" alt="down arrow">
-        <img src="img/delete.svg" class="delete-task" alt="trash bin">
-        <img src="img/check.svg" class="check-task" alt="check mark">
-    </div>
-</li>`);
-    taskTxt.value = null;
 });
-*/
