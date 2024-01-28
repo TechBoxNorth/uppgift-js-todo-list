@@ -17,6 +17,11 @@ taskList.addEventListener('click', (e) => {
     if(e.target.classList.contains('check-task')){
         console.log('check!');
         e.target.classList.toggle('checked')
+    } else if (e.target.classList.contains('delete-task')){
+        console.log('delete');
+        const task = e.target.parentElement.parentElement;
+        console.log(task);
+        task.remove();
     }
 });
 
